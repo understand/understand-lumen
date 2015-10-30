@@ -1,0 +1,29 @@
+{
+    "name": "understand/understand-lumen",
+    "description": "Understand.io Laravel Lumen service provider.",
+    "keywords": ["log", "logging", "Understand", "Laravel", "Lumen", "Understand.io"],
+    "homepage": "https://github.com/understand/understand-lumen",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aivis Silins",
+            "email": "aivis.silins@gmail.com",
+            "homepage": "https://www.understand.io"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "understand/understand-monolog": "~1.0",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Understand\\": "src/Understand"
+        }
+    },
+    "minimum-stability": "stable"
+}
