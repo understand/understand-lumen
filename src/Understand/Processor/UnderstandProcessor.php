@@ -32,9 +32,9 @@ class UnderstandProcessor
             {
                 $caller = [$caller];
             }
-            
-            $callback = array_get($caller, 0);
-            $args = array_get($caller, 1, []);
+
+            $callback = $caller[0];
+            $args = isset($caller[1]) ? $caller[1] : [];
 
             $value = call_user_func_array($callback, $args);
 
