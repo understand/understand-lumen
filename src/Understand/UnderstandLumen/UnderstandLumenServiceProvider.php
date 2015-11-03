@@ -30,10 +30,10 @@ class UnderstandLumenServiceProvider extends ServiceProvider
      */
     protected function registerConfig()
     {
-        $this->app->configure('understand-lumen');
+        $this->app->configure('understand_lumen');
 
-        $configPath = __DIR__ . '/../config/understand-lumen.php';
-        $this->mergeConfigFrom($configPath, 'understand-lumen');
+        $configPath = __DIR__ . '/../config/understand_lumen.php';
+        $this->mergeConfigFrom($configPath, 'understand_lumen');
     }
 
     /**
@@ -43,12 +43,12 @@ class UnderstandLumenServiceProvider extends ServiceProvider
      */
     protected function registerMonologHandler()
     {
-        $handlerType = $this->app['config']->get('understand-lumen.handler', 'sync');
-        $inputToken = $this->app['config']->get('understand-lumen.token');
-        $apiUrl = $this->app['config']->get('understand-lumen.url' ,'https://api.understand.io');
-        $silent = $this->app['config']->get('understand-lumen.silent', true);
-        $sslBundlePath = $this->app['config']->get('understand-lumen.ssl_bundle_path', false);
-        $metaFields = $this->app['config']->get('understand-lumen.meta', []);
+        $handlerType = $this->app['config']->get('understand_lumen.handler', 'sync');
+        $inputToken = $this->app['config']->get('understand_lumen.token');
+        $apiUrl = $this->app['config']->get('understand_lumen.url' ,'https://api.understand.io');
+        $silent = $this->app['config']->get('understand_lumen.silent', true);
+        $sslBundlePath = $this->app['config']->get('understand_lumen.ssl_bundle_path', false);
+        $metaFields = $this->app['config']->get('understand_lumen.meta', []);
 
         if ($handlerType == 'async')
         {
