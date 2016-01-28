@@ -20,4 +20,12 @@ class UnderstandLumenFieldProviderTest extends PHPUnit_Framework_TestCase
         
         $this->assertSame($value, $fieldProvider->{$method}());
     }
+
+    public function testSessionStore()
+    {
+        $fieldProvider = new FieldProvider();
+
+        $this->assertNull($fieldProvider->getSessionId());
+        $this->assertNull($fieldProvider->getFromSession('test_key'));
+    }
 }
