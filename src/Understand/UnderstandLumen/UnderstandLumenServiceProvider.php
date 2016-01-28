@@ -74,7 +74,12 @@ class UnderstandLumenServiceProvider extends ServiceProvider
         $this->app->bind('understand-lumen.field-provider', function($app)
         {
             $fieldProvider = new FieldProvider();
-            $fieldProvider->setSessionStore($app['session.store']);
+
+            if ($app->bound('session.store'))
+            {
+                $fieldProvider->setSessionStore($app['session.store']);
+            }
+
             $fieldProvider->setRequest($app['request']);
             $fieldProvider->setEnvironment($app->environment());
             $fieldProvider->setTokenProvider($app['understand-lumen.token-provider']);
