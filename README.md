@@ -1,3 +1,5 @@
+## The service provider is deprecated - it does not support error grouping.
+---
 ## Laravel Lumen service provider for Understand.io
 
 [![Build Status](https://travis-ci.org/understand/understand-lumen.svg)](https://travis-ci.org/understand/understand-lumen)
